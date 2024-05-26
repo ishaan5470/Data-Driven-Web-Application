@@ -210,17 +210,17 @@ export default function UserDetails({rows,loading,setLoading}) {
       >
         <DialogContent>
           <DialogContentText>
-            {currentRow.Name} has a subscription plan of : $ {currentSubscription}
+            {currentRow.Name} has a subscription plan of : ${currentSubscription}
 
             
 
           </DialogContentText>
-          <DialogContentText style={{marginTop:10, fontSize:10}}>
+          <DialogContentText style={{marginTop:10, fontSize:13}}>
           *
             basePrice=100,
             pricePerCreditLine=120,
             pricePerCreditScorePoint=150
-            <DialogContentText style={{marginTop:10, fontSize:10}}>
+            <DialogContentText style={{marginTop:10, fontSize:13}}>
             *
             SubscriptionPrice = BasePrice + (PricePerCreditLine * CreditLines) + (PricePerCreditScorePoint * CreditScore)
             </DialogContentText>

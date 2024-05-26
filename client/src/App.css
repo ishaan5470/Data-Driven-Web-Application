@@ -1,5 +1,5 @@
 body{
-  background-color: #ffb0fc;
+  background-color: #7E8EF1;
   color: white;
 }
 .App{
@@ -39,7 +39,7 @@ body{
   cursor: pointer;
   border: 1px solid ;
   border-radius: 5px;
-   background-color: #f65af0;
+   background-color: #7E8EF1;
    font-family: Montserrat;
    color:white;
    font-weight: 500;

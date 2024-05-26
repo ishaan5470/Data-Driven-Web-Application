@@ -40,6 +40,7 @@ function Home({loading, setLoading, data, setData}) {
           fontWeight: 'bold',
           color: '#555',
           opacity: '0.7',
+          
         }}
       >
         CSV Parser
