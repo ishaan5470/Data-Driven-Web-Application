@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import UploadFileIcon from '@mui/icons-material/UploadFile';
+import CircularProgress from '@mui/material/CircularProgress';
 import {useNavigate} from 'react-router-dom';
 import Papa from  'papaparse';
 import './App.css';
+
 
 
 function Home({loading, setLoading, data, setData}) {
@@ -27,8 +29,21 @@ function Home({loading, setLoading, data, setData}) {
         console.log(data)
         navigate('/user-details')
       }
-  return (loading?<h2>Loading...</h2>:
+  return (loading?<h2>Loading... {loading && <CircularProgress style={{fontSize:40}} thickness={40} />}</h2>:
    ( <div className="App">
+    <div
+        style={{
+          position: 'absolute',
+          top: '20px',
+          left: '20px',
+          fontSize: '20px',
+          fontWeight: 'bold',
+          color: '#555',
+          opacity: '0.7',
+        }}
+      >
+        CSV Parser
+      </div>
         <div className="inputDiv">
             <label id="uploadLabel" htmlFor="fileUpload"><UploadFileIcon id="uploadLabelIcon"  />Upload CSV File</label>
             <input id="fileUpload" type="file" name="file" accept=".csv" onChange={handleChange}/>

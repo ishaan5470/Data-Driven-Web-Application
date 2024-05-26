@@ -20,6 +20,8 @@ import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 
 function TablePaginationActions(props) {
@@ -131,7 +133,7 @@ export default function UserDetails({rows,loading,setLoading}) {
       <>
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 500 }} aria-label="custom pagination table">
-     {loading?(<div style={{width:'100vw', height:'82vh', display:'flex', justifyContent:'center', alignItems:'center'}}><h2>Loading...</h2></div>):(<>
+     {loading?(<div style={{width:'100vw', height:'82vh', display:'flex', justifyContent:'center', alignItems:'center'}}><h2>Loading...{loading && <CircularProgress style={{fontSize:40}} thickness={40} />}</h2></div>):(<>
      <TableHead>
           <TableRow>
             <TableCell>Email</TableCell>
@@ -208,7 +210,22 @@ export default function UserDetails({rows,loading,setLoading}) {
       >
         <DialogContent>
           <DialogContentText>
-            {currentRow.Name} has a subscription plan of: {currentSubscription}Rs
+            {currentRow.Name} has a subscription plan of : $ {currentSubscription}
+
+            
+
+          </DialogContentText>
+          <DialogContentText style={{marginTop:10, fontSize:10}}>
+          *
+            basePrice=100,
+            pricePerCreditLine=120,
+            pricePerCreditScorePoint=150
+            <DialogContentText style={{marginTop:10, fontSize:10}}>
+            *
+            SubscriptionPrice = BasePrice + (PricePerCreditLine * CreditLines) + (PricePerCreditScorePoint * CreditScore)
+            </DialogContentText>
+            
+
           </DialogContentText>
         </DialogContent>
       </Dialog>
