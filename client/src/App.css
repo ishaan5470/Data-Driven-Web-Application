@@ -1,5 +1,5 @@
 body{
-  background-color: #1C82AD;
+  background-color: #ffb0fc;
   color: white;
 }
 .App{
@@ -39,11 +39,14 @@ body{
   cursor: pointer;
   border: 1px solid ;
   border-radius: 5px;
-   background-color: #1C82AD;
+   background-color: #f65af0;
    font-family: Montserrat;
    color:white;
    font-weight: 500;
 }
 #generateBtn:hover{
   opacity: 0.8;
+}
+#fileUpload{
+  display: none;
 }
