@@ -36,9 +36,9 @@ function Home({loading, setLoading, data, setData}) {
           position: 'absolute',
           top: '20px',
           left: '20px',
-          fontSize: '20px',
+          fontSize: '27px',
           fontWeight: 'bold',
-          color: '#555',
+          color: 'white',
           opacity: '0.7',
           
         }}
@@ -51,7 +51,7 @@ function Home({loading, setLoading, data, setData}) {
             {fileName && <p>Uploaded File: {fileName}</p>}
         </div>
         <div>
-            <button id="generateBtn" onClick={handleClick}>Generate CSV</button>
+            <button id="generateBtn" onClick={handleClick}>Parse CSV</button>
         </div>
     </div>)
   );

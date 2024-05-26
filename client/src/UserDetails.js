@@ -209,7 +209,7 @@ export default function UserDetails({rows,loading,setLoading}) {
         onClose={()=>setDialogOpen(false)}
       >
         <DialogContent>
-          <DialogContentText>
+          <DialogContentText style={{fontSize:18}}>
             {currentRow.Name} has a subscription plan of : ${currentSubscription}
 
             
