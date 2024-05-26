@@ -21,7 +21,7 @@ function Home({loading, setLoading, data, setData}) {
         complete:function(result){
           setData(result.data);
           setLoading(false);
-          alert('File Uploaded! Now Click on the Generate CSV button')
+          alert('File Uploaded! Now Click on the parse CSV button')
         }
       })
     }
