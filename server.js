@@ -11,7 +11,7 @@ function generateName(firstNames, lastNames) {
 
 // Function to generate masked phone numbers
 function maskPhoneNumber(phoneNumber) {
-    const maskedNumber = `***-***-${phoneNumber.slice(-4)}`;
+    const maskedNumber = `####-${phoneNumber.slice(-4)}`;
     return maskedNumber;
 }
 

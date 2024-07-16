@@ -97,11 +97,13 @@ export default function UserDetails({rows,loading,setLoading}) {
       MaskedPhoneNumber:'',
       SubscriptionPlan:''
   });
+  
   const basePrice=100; //setting base price to 100
   const pricePerCreditLine=120;
   const pricePerCreditScorePoint=150;
   const [currentSubscription, setCurrentSubscription] = useState(0);
   const [dialogOpen, setDialogOpen] = useState(false);
+  //finding the empty rows on the last page that is 2 (5->5->3 orignal) exampleeee
   const emptyRows =
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
 

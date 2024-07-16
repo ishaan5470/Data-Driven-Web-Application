@@ -4,7 +4,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import {useNavigate} from 'react-router-dom';
 import Papa from  'papaparse';
 import './App.css';
-
+const imageurl= "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/2b4f62d606d1b2bfba9ba9e5386fabb7"
 
 
 function Home({loading, setLoading, data, setData}) {
@@ -52,6 +52,7 @@ function Home({loading, setLoading, data, setData}) {
         </div>
         <div>
             <button id="generateBtn" onClick={handleClick}>Parse CSV</button>
+            <img src={imageurl} alt="image" style={{width:100, height:100}}/>
         </div>
     </div>)
   );
